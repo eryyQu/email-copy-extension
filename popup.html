@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Email Copy</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 14px; }
+    .row { display: flex; align-items: center; gap: 10px; }
+    .status { margin-top: 10px; font-size: 12px; color: #555; }
+    .toggle {
+      appearance: none; width: 42px; height: 24px; background: #ddd; border-radius: 999px; position: relative; outline: none; cursor: pointer;
+    }
+    .toggle:checked { background: #4caf50; }
+    .toggle::after {
+      content: ""; position: absolute; width: 18px; height: 18px; top: 3px; left: 3px; background: white; border-radius: 50%; transition: left .2s ease;
+    }
+    .toggle:checked::after { left: 21px; }
+    code { background: #f2f2f2; padding: 2px 6px; border-radius: 6px; }
+  </style>
+</head>
+<body>
+  <div class="row">
+    <input id="enabled" class="toggle" type="checkbox" />
+    <label for="enabled"><strong>Włącz rozszerzenie</strong></label>
+  </div>
+  <p class="status" id="status"></p>
+  <p class="status">Skrót: <code>Alt+C</code> (na macOS: <code>⌥C</code>). Zaznacz tekst, wciśnij skrót – do schowka trafią tylko adresy e‑mail sformatowane jako „mail@domena; ”.</p>
+  <script src="popup.js"></script>
+</body>
+</html>
