@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "Email Copy (Alt+C)",
+  "version": "1.0.0",
+  "description": "Kopiuje z zaznaczonego tekstu tylko adresy e‑mail. Skrót: Alt+C. Przełącznik włącz/wyłącz w popupie.",
+  "permissions": [
+    "storage",
+    "clipboardWrite",
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Email Copy"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "commands": {
+    "copy-emails": {
+      "suggested_key": {
+        "default": "Alt+C",
+        "mac": "Alt+C"
+      },
+      "description": "Skopiuj tylko adresy e‑mail z zaznaczenia"
+    }
+  }
+}
