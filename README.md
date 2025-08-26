@@ -27,4 +27,4 @@ Instead of copying entire text blocks and cleaning them manually, this tool extr
 - Works on all regular websites.
 
 ## 📬 Contact
-If you find a bug or have a feature request, feel free to open an [issue](https://github.com/your-username/email-copy-extension/issues).
+If you find a bug or have a feature request, feel free to open an [issue](https://github.com/eryyQu/email-copy-extension/issues).
